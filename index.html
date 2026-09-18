@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshMart Supermarket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#"><span>🛒</span> Fresh<span>Mart</span></a>
+      <div class="search-box">
+        <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products">
+        <button id="searchBtn">🔍</button>
+      </div>
+      <button class="cart-btn" id="cartButton">🛒 Cart <b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <p class="tag">WELCOME TO FRESH MART</p>
+          <h1>Fresh groceries,<br><span>delivered with care.</span></h1>
+          <p>Shop everyday essentials, fresh fruits, vegetables and household products in one place.</p>
+          <a href="#products" class="hero-btn">Shop Now →</a>
+        </div>
+        <div class="hero-card">
+          <div>🥦 🍎 🥛</div>
+          <strong>20+ Essential Items</strong>
+          <small>Quality products at great prices</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories container">
+      <h2>Shop by Category</h2>
+      <div class="category-list">
+        <button class="category active" data-category="All">🛍️ All</button>
+        <button class="category" data-category="Grocery">🌾 Grocery</button>
+        <button class="category" data-category="Dairy">🥛 Dairy</button>
+        <button class="category" data-category="Fruits">🍎 Fruits</button>
+        <button class="category" data-category="Vegetables">🥕 Vegetables</button>
+        <button class="category" data-category="Household">🧹 Household</button>
+        <button class="category" data-category="Personal Care">🧴 Personal Care</button>
+        <button class="category" data-category="Snacks">🍪 Snacks</button>
+      </div>
+    </section>
+
+    <section class="products-section container" id="products">
+      <div class="section-title">
+        <div>
+          <p class="tag">OUR PRODUCTS</p>
+          <h2>Popular Items</h2>
+        </div>
+        <span id="resultCount"></span>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+      <p id="noResults" class="no-results">No products found.</p>
+    </section>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="closeCart" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total-row"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+      <button class="checkout" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <a class="logo" href="#">🛒 Fresh<span>Mart</span></a>
+        <p>Your simple online supermarket.</p>
+      </div>
+      <p>© 2026 FreshMart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
